@@ -1,0 +1,342 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* css general */
+
+body{
+    background-color: white;
+}
+
+header{
+    background-color: rgb(117, 170, 219);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#logo{
+    height: 180px;
+    width: 180px;
+}
+
+#logo-mundial{
+    height: 100%;
+    width: 100%;
+}
+
+h1{
+    background-color: rgb(117, 170, 219);
+    color: white;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 70px;
+    margin: 10px;
+}
+
+nav{
+    background-color: rgb(117, 170, 219);
+}
+
+#ul-nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#li-nav{
+    list-style-type: none;
+    margin: 15px;
+}
+
+a{
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+
+a:hover{
+    text-decoration: underline solid white;
+    
+}
+
+main{
+    height: 1000px;
+    display:grid;
+}
+
+#contenedor-contador{
+    grid-area: a2;
+    justify-self: center;
+    align-self: center;
+    height: 80%;
+    width: 90%;
+}
+
+#contador{
+    height: 100%;
+    width: 100%;
+}
+
+#noticias{
+    grid-area: a5;
+    justify-self: center;
+    align-self: center;
+    height: 50%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(240, 240, 240);
+    padding: 20px;
+}
+
+#ultimas-noticias{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: start;
+}
+
+.noticias{
+    text-align: start;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.titulo-noticias{
+    text-align: start;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+#parrafo-noticia{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#publicidad1-index{
+    height: 900px;
+    width: 90%;
+    grid-area: a1;
+    justify-self: center;
+    align-self: center;
+}
+
+
+#publicidad1{
+    width: 90%;
+    height: 90%;
+}
+
+#publicidad2-index{
+    height: 900px;
+    width: 90%;
+    grid-area: a3;
+    justify-self: center;
+    align-self: center;
+}
+
+#publicidad2{
+    width: 90%;
+    height: 90%;
+}
+
+
+#link-noticia{
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+    color: blue;
+}
+
+footer{
+    background-color: rgb(117, 170, 219);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    
+#parrafo_footer{
+    color: white;
+    text-align: center;
+}
+
+/* Vista para movil */
+
+@media only screen and (max-width: 600px) {
+
+    header{
+        border-bottom: solid white;
+    }
+
+    h1{
+        background-color: rgb(117, 170, 219);
+        font-size: 30px;
+    }
+
+    #ul-nav{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    main{
+        display: grid;
+        grid-template-columns: 80% 20%;
+        grid-template-rows: 40% 60%;
+        grid-template-areas: 
+            "a2 a1" 
+            "a5 a1";
+        
+    }
+
+    #publicidad1{
+        width: 90%;
+        height: 90%;
+        object-fit: cover;
+    }
+
+    #publicidad2-index{
+        height: 900px;
+        width: 90%;
+        grid-area: a1;
+        justify-self: center;
+        align-self: center;
+    }
+}
+
+/* Vista para PC */
+
+@media screen and (min-width: 600px) {
+
+    #ul-nav{
+        flex-direction: row;
+    }
+
+    main{
+        display: grid;
+        grid-template-columns: 20% 60% 20%;
+        grid-template-rows: 50% 50%;
+        grid-template-areas: 
+            "a1 a2 a3" 
+            "a1 a5 a3";
+            align-items: center;
+            justify-items: center;
+    }
+}
+
+
+
+/* ESTILO VIEJO DE LA PRIMERA ENTREGA SIN CAMBIAR A FLEX Y GRID */
+
+#titulo-recomendaciones{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+    top: 5%;
+
+}
+
+#div-recomendaciones{
+    display: inline-block;
+    position: relative;
+    top: 10%;
+    left: 10%;
+}
+
+#titulo-hacer{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 50px;
+}
+
+#titulo-nohacer{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 50px;
+}
+
+
+#li-recomendaciones{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 15px;
+}
+
+#titulo-fixture{
+    text-align: center;
+    position: relative;
+    top: 3%;
+}
+
+#contenedor-fixture{
+    display: inline-block;
+    height: 90%;
+    position: relative;
+    left: 25%;
+    top: 5%;
+}
+
+#fixture{
+    height: 100%;
+    width: 100%;
+}
+
+#titulo-estadios{
+    text-align: center;
+    position: relative;
+    top: 5%;
+}
+
+#tabla-estadios{
+    display: inline-block;
+    position: relative;
+    left: 15%;
+    top: 5%;
+}
+
+#mapa-qatar{
+    display: inline-block;
+    position: relative;
+    left: 40%;
+    top: 20%;
+}
+
+#titulo-contacto{
+    text-align: center;
+    margin-top: 30px;
+}
+
+label{
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 20px;
+}
+
+#boton-contacto{
+    background-color: rgb(117, 170, 219);
+    color: black;
+    font-size: large;
+    position: relative;
+    left: 60%;
+    top: 100px;
+}
+
+#formulario{
+    display: inline-block;
+    position: relative;
+    left: 10%;
+    top: 200px;
+    margin: 20px;
+}
+
+#fondo-messi{
+    height: 900px;
+    background-image: url(../multimedia/fondo-messi.jpg);
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: white;
+}
